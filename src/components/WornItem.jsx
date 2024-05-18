@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import BasicRating from "./RatingButton";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -57,8 +58,8 @@ const WornItem = ({
           </Item>
         </Grid>
       </Grid>
-      <button className=" w-full p-2 outline border-black rounded hover:bg-black hover:text-white font-semibold">
-        Like ❤️
+      <button className=" w-full outline border-black rounded font-semibold">
+        <BasicRating />
       </button>
     </div>
   );
