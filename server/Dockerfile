@@ -8,4 +8,4 @@ ENV HOST=$HOST
 ARG PORT
 ENV PORT=$PORT
 RUN npm install
-CMD ["npm", "run", "start", "--", "--host", "$HOST", "--port", "$PORT"]
+CMD ["/bin/bash", "-c", "npm run start --host $HOST --port $PORT"]
