@@ -12,7 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const ClotheItem = ({
+const WornItem = ({
   clothID,
   owner,
   name,
@@ -23,15 +23,15 @@ const ClotheItem = ({
   imageurl,
 }) => {
   return (
-    <div className="flex flex-col gap-5 justify-center items-center">
+    <div className="flex flex-col gap-5 justify-center items-center object-contain">
       <img
-        className=" outline rounded border-black object-contain h-1/2 w-1/2"
+        className=" outline rounded border-black object-contain"
         src="https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/465185/item/cagoods_07_465185.jpg?width=750"
         alt="image of clothing"
       />
       <Grid
         sx={{
-          width: "50%",
+          padding: 0,
         }}
         container
         spacing={2}
@@ -43,7 +43,7 @@ const ClotheItem = ({
         </Grid>
         <Grid item xs={4}>
           <Item>
-            <span className="font-semibold">Owner: {owner}</span>
+            <span className="font-semibold">Rating: {owner}</span>
           </Item>
         </Grid>
         <Grid item xs={4}>
@@ -53,12 +53,15 @@ const ClotheItem = ({
         </Grid>
         <Grid item xs={8}>
           <Item>
-            <span className="font-semibold">Owner: {owner}</span>
+            <span className="font-semibold">When you wore it : {owner}</span>
           </Item>
         </Grid>
       </Grid>
+      <button className=" w-full p-2 outline border-black rounded hover:bg-black hover:text-white font-semibold">
+        Like ❤️
+      </button>
     </div>
   );
 };
 
-export default ClotheItem;
+export default WornItem;

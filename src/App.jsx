@@ -1,6 +1,6 @@
 import ButtonGroup from "./components/ButtonGroup";
 import TopBar from "./components/TopBar";
-import ClotheItem from "./components/ClotheItem";
+import WornItem from "./components/WornItem";
 
 function App() {
   return (
@@ -8,7 +8,10 @@ function App() {
       <div className="flex flex-col justify-center items-center rounded-xl border-2 border-black w-2/5 h-[90%] mx-auto">
         <TopBar></TopBar>
         <div className="mt-auto mb-auto">
-          <ClotheItem></ClotheItem>
+          <div className="flex w-full ">
+            <WornItem></WornItem>
+            <WornItem></WornItem>
+          </div>
         </div>
         <ButtonGroup></ButtonGroup>
       </div>
