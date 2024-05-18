@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div>
+    <div className="border-black w-[430px] h-[932px]">
       <h1>Hallo! America YA</h1>
     </div>
   );
