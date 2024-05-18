@@ -1,3 +1,6 @@
+import ThisGroup from "../components/thisWeek/ThisGroup";
+import NextWeekComp from "../components/nextWeek/NextWeekComp";
+
 function Expected() {
   return (
     <div className="flex flex-col overflow-hidden h-full w-full">
@@ -8,7 +11,14 @@ function Expected() {
         Expected Clothes
       </h1>
       <div className="  mt-auto mb-auto h-auto overflow-scroll p-5">
-        {/* content goes here */}
+        {/* This week*/}
+        <div>
+          <ThisGroup />
+        </div>
+        {/* Next week */}
+        <div>
+          <NextWeekComp />
+        </div>
       </div>
     </div>
   );
