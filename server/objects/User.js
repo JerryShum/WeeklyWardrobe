@@ -18,11 +18,12 @@ users = [
 
 const updateStyleObject = (username, clothingId, rating) => {
     let user = users.find(user => user.username === username);
-    let clothing = require('./Clothing').wornClothings.find(wornClothing => wornClothing.username === username && wornClothing.clothingId == clothingId);
-    if(clothing === undefined) {
+    let wornClothing = require('./Clothing').wornClothings.find(wornClothing => wornClothing.username === username && wornClothing.clothingId == clothingId);
+    if(wornClothing === undefined) {
         console.log("Clothing not found");
         return 'Clothing piece (id=' + clothingId + ' was not worn by this user ' + username ;
     }
+    let clothing = require('./Clothing').clothings.find(clothing => clothing.id == clothingId);
     // console log styleObj and clothing.styleObj
     console.log(user.styleObj);
     console.log(clothing.styleObj);
