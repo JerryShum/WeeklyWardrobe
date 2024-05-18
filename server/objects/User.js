@@ -19,7 +19,11 @@ users = [
 const updateStyleObject = (username, clothingId, rating) => {
     let user = users.find(user => user.username === username);
     let styleObj = user.style;
-    let clothing = require('./Clothing').clothings.find(clothing => clothing.id === clothingId);
+    let clothing = require('./Clothing').wornClothings.find(wornClothing => wornClothing.username === username && wornClothing.clothingId == clothingId);
+    if(clothing === undefined) {
+        console.log("Clothing not found");
+        return 'Clothing not found';
+    }
     styleObj.vintageLvl = (styleObj.vintageLvl + clothing.style.vintageLvl * rating) / 2;
     styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.style.smartCasualLvl * rating) / 2;
     styleObj.sportyLvl = (styleObj.sportyLvl + clothing.style.sportyLvl * rating) / 2;
@@ -27,6 +31,7 @@ const updateStyleObject = (username, clothingId, rating) => {
     styleObj.partyLvl = (styleObj.partyLvl + clothing.style.partyLvl * rating) / 2;
     // update user style object
     user.style = styleObj;
+    return styleObj;
 }
 
 module.exports = { User, users, updateStyleObject };

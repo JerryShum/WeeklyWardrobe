@@ -27,7 +27,7 @@ app.get('/get_worn_clothes', (req, res) => {
     // check if username is provided
     if (req.query === undefined || req.query.username === undefined) {
         res.status(400).send('Error: username is required');
-        return; 
+        return;
     }
     const username = req.query.username;
     const getWornClothes = require('./objects/Clothing').getWornClothes;
@@ -99,8 +99,9 @@ app.get('/update_style_object', (req, res) => {
     const username = req.query.username;
     const clothingId = req.query.clothingId;
     const rating = req.query.rating;
-    const oldStyleObject = updateStyleObject(username, clothingId, rating);
-    res.status(200).send({ 'status': 'success', 'data': { 'oldStyleObject': oldStyleObject, 'newStyleObject': newStyleObject } });
+    const oldStyleObject = require('./objects/User').users.find(user => user.username === username).styleObject;
+    const success = updateStyleObject(username, clothingId, rating);
+    res.status(200).send({ 'status': 'success', 'data': { 'oldStyleObject': oldStyleObject, 'newStyleObject': newStyleObject, 'success': success } });
 });
 
 app.listen(port, host, () => {
