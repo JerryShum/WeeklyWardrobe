@@ -18,19 +18,21 @@ users = [
 
 const updateStyleObject = (username, clothingId, rating) => {
     let user = users.find(user => user.username === username);
-    let styleObj = user.styleObj;
     let clothing = require('./Clothing').wornClothings.find(wornClothing => wornClothing.username === username && wornClothing.clothingId == clothingId);
     if(clothing === undefined) {
         console.log("Clothing not found");
         return 'Clothing piece (id=' + clothingId + ' was not worn by this user ' + username ;
     }
-    styleObj.vintageLvl = (styleObj.vintageLvl + clothing.styleObj.vintageLvl * rating) / 2;
-    styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.styleObj.smartCasualLvl * rating) / 2;
-    styleObj.sportyLvl = (styleObj.sportyLvl + clothing.styleObj.sportyLvl * rating) / 2;
-    styleObj.formalLvl = (styleObj.formalLvl + clothing.styleObj.formalLvl * rating) / 2;
-    styleObj.partyLvl = (styleObj.partyLvl + clothing.styleObj.partyLvl * rating) / 2;
+    // console log styleObj and clothing.styleObj
+    console.log(styleObj);
+    console.log(clothing.styleObj);
+    user.styleObj.vintageLvl = (styleObj.vintageLvl + clothing.styleObj.vintageLvl * rating) / 2;
+    user.styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.styleObj.smartCasualLvl * rating) / 2;
+    user.styleObj.sportyLvl = (styleObj.sportyLvl + clothing.styleObj.sportyLvl * rating) / 2;
+    user.styleObj.formalLvl = (styleObj.formalLvl + clothing.styleObj.formalLvl * rating) / 2;
+    user.styleObj.partyLvl = (styleObj.partyLvl + clothing.styleObj.partyLvl * rating) / 2;
     // update user style object
-    user.style = styleObj;
+    user.styleObj = styleObj;
     return styleObj;
 }
 
