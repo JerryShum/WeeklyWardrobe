@@ -26,13 +26,11 @@ const updateStyleObject = (username, clothingId, rating) => {
     // console log styleObj and clothing.styleObj
     console.log(user.styleObj);
     console.log(clothing.styleObj);
-    user.styleObj.vintageLvl = (styleObj.vintageLvl + clothing.styleObj.vintageLvl * rating) / 2;
-    user.styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.styleObj.smartCasualLvl * rating) / 2;
-    user.styleObj.sportyLvl = (styleObj.sportyLvl + clothing.styleObj.sportyLvl * rating) / 2;
-    user.styleObj.formalLvl = (styleObj.formalLvl + clothing.styleObj.formalLvl * rating) / 2;
-    user.styleObj.partyLvl = (styleObj.partyLvl + clothing.styleObj.partyLvl * rating) / 2;
-    // update user style object
-    user.styleObj = styleObj;
+    user.styleObj.vintageLvl = (user.styleObj.vintageLvl + clothing.styleObj.vintageLvl * rating) / 2;
+    user.styleObj.smartCasualLvl = (user.styleObj.smartCasualLvl + clothing.styleObj.smartCasualLvl * rating) / 2;
+    user.styleObj.sportyLvl = (user.styleObj.sportyLvl + clothing.styleObj.sportyLvl * rating) / 2;
+    user.styleObj.formalLvl = (user.styleObj.formalLvl + clothing.styleObj.formalLvl * rating) / 2;
+    user.styleObj.partyLvl = (user.styleObj.partyLvl + clothing.styleObj.partyLvl * rating) / 2;
     return styleObj;
 }
 
