@@ -24,7 +24,7 @@ const updateStyleObject = (username, clothingId, rating) => {
         return 'Clothing piece (id=' + clothingId + ' was not worn by this user ' + username ;
     }
     // console log styleObj and clothing.styleObj
-    console.log(styleObj);
+    console.log(user.styleObj);
     console.log(clothing.styleObj);
     user.styleObj.vintageLvl = (styleObj.vintageLvl + clothing.styleObj.vintageLvl * rating) / 2;
     user.styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.styleObj.smartCasualLvl * rating) / 2;
