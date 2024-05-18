@@ -191,3 +191,32 @@ Response Example
     }
 }
 ```
+
+## /user
+
+GET http://jeremymark.ca:3000/user
+
+Query Body
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| username | string | The username of the user. |
+
+Response Example
+
+```json
+{
+    "status": "success",
+    "data": {
+        "username": "Jeremy",
+        "style": {
+            "vintageLvl": 4,
+            "smartCasualLvl": 1,
+            "sportyLvl": 5,
+            "formalLvl": 2,
+            "partyLvl": 3
+        },
+        "subscribed": true
+    }
+}
+```
