@@ -99,10 +99,10 @@ app.get('/update_style_object', (req, res) => {
     const username = req.query.username;
     const clothingId = req.query.clothingId;
     const rating = req.query.rating;
-    const oldStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject;
+    // const oldStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject;
     const success = updateStyleObject(username, clothingId, rating);
-    const newStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject; // Define the 'newStyleObject' variable
-    res.status(200).send({ 'status': 'success', 'data': { 'oldStyleObject': oldStyleObject, 'newStyleObject': newStyleObject, 'success': success } });
+    // const newStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject; // Define the 'newStyleObject' variable
+    res.status(200).send({ 'status': 'success', 'data': { success } });
 });
 
 app.listen(port, host, () => {
