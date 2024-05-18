@@ -7,7 +7,7 @@ function TopBar() {
         <p className="text-lg font-semibold">Logged in as: </p>
         <p className="text-lg font-semibold underline">Jeremy</p>
       </div>
-      <button className="border-2 border-black rounded outline p-3 hover:bg-black hover:text-white duration-300 font-semibold">
+      <button className="border border-black rounded outline p-3 hover:bg-black hover:text-white duration-300 font-semibold">
         Logout
       </button>
     </div>

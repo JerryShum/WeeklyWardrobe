@@ -3,7 +3,7 @@ import WornItem from "./WornItem";
 
 function WornGrid() {
   return (
-    <div className="w-full ">
+    <div className="w-full grid grid-cols-2 gap-y-14 gap-x-5">
       <WornItem />
       <WornItem />
       <WornItem />
