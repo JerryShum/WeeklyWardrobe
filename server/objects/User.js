@@ -18,11 +18,11 @@ users = [
 
 const updateStyleObject = (username, clothingId, rating) => {
     let user = users.find(user => user.username === username);
-    let styleObj = user.style;
+    let styleObj = user.styleObj;
     let clothing = require('./Clothing').wornClothings.find(wornClothing => wornClothing.username === username && wornClothing.clothingId == clothingId);
     if(clothing === undefined) {
         console.log("Clothing not found");
-        return 'Clothing not found';
+        return 'Clothing piece (id=' + clothingId + ' was not worn by this user ' + username ;
     }
     styleObj.vintageLvl = (styleObj.vintageLvl + clothing.style.vintageLvl * rating) / 2;
     styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.style.smartCasualLvl * rating) / 2;

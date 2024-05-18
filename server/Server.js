@@ -99,9 +99,9 @@ app.get('/update_style_object', (req, res) => {
     const clothingId = req.query.clothingId;
     const rating = req.query.rating;
     const oldStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject;
-    const success = updateStyleObject(username, clothingId, rating);
+    const message = updateStyleObject(username, clothingId, rating);
     const newStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject;
-    res.status(200).send({ 'status': 'success', 'data': { success } });
+    res.status(200).send({ 'status': 'success', 'data': { message } });
 });
 
 app.listen(port, host, () => {
