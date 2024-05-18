@@ -24,11 +24,11 @@ const updateStyleObject = (username, clothingId, rating) => {
         console.log("Clothing not found");
         return 'Clothing piece (id=' + clothingId + ' was not worn by this user ' + username ;
     }
-    styleObj.vintageLvl = (styleObj.vintageLvl + clothing.style.vintageLvl * rating) / 2;
-    styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.style.smartCasualLvl * rating) / 2;
-    styleObj.sportyLvl = (styleObj.sportyLvl + clothing.style.sportyLvl * rating) / 2;
-    styleObj.formalLvl = (styleObj.formalLvl + clothing.style.formalLvl * rating) / 2;
-    styleObj.partyLvl = (styleObj.partyLvl + clothing.style.partyLvl * rating) / 2;
+    styleObj.vintageLvl = (styleObj.vintageLvl + clothing.styleObj.vintageLvl * rating) / 2;
+    styleObj.smartCasualLvl = (styleObj.smartCasualLvl + clothing.styleObj.smartCasualLvl * rating) / 2;
+    styleObj.sportyLvl = (styleObj.sportyLvl + clothing.styleObj.sportyLvl * rating) / 2;
+    styleObj.formalLvl = (styleObj.formalLvl + clothing.styleObj.formalLvl * rating) / 2;
+    styleObj.partyLvl = (styleObj.partyLvl + clothing.styleObj.partyLvl * rating) / 2;
     // update user style object
     user.style = styleObj;
     return styleObj;
