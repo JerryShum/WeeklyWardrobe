@@ -21,7 +21,6 @@ if (process.env.PORT) {
 console.log(`Server is starting on http://${host}:${port}`);
 
 const updateStyleObject = require('./objects/User').updateStyleObject;
-const newStyleObject = require('./objects/User').users.find(user => user.username === username).styleObject;
 
 app.get('/get_worn_clothes', (req, res) => {
     // check if username is provided
@@ -99,9 +98,9 @@ app.get('/update_style_object', (req, res) => {
     const username = req.query.username;
     const clothingId = req.query.clothingId;
     const rating = req.query.rating;
-    // const oldStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject;
+    const oldStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject;
     const success = updateStyleObject(username, clothingId, rating);
-    // const newStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject; // Define the 'newStyleObject' variable
+    const newStyleObject = require('./objects/User').users.find(user => user.username == req.query.username).styleObject;
     res.status(200).send({ 'status': 'success', 'data': { success } });
 });
 
