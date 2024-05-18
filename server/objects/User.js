@@ -3,7 +3,7 @@ const { StyleLevels } = require('./Style.js');
 class User {
     constructor(username, styleObj, subscribed) {
         this.username = username;
-        this.style = styleObj;
+        this.styleObj = styleObj;
         this.subscribed = subscribed;
     }
 }
