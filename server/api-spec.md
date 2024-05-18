@@ -220,3 +220,32 @@ Response Example
     }
 }
 ```
+
+## /update_style_object
+
+GET http://jeremymark.ca:3000/update_style_object
+
+Query Body
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| username | string | The username of the user. |
+| clothingId | int | The clothing id, in order to fetch the styleObject. It is assumed that the user likes this clothingId and will positively impact the user's style object |
+
+Response Example
+
+```json
+{
+    "status": "success",
+    "data": {
+        "message": {
+            "vintageLvl": 24.999989986419678,
+            "smartCasualLvl": 24.999988555908203,
+            "sportyLvl": 5,
+            "formalLvl": 4.999998569488525,
+            "partyLvl": 4.999999046325684
+        },
+        "update": {}
+    }
+}
+```
