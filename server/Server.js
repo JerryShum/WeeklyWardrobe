@@ -24,7 +24,7 @@ app.get('/get_worn_clothes', (req, res) => {
     // check if username is provided
     if (req.query === undefined || req.query.username === undefined) {
         res.status(400).send('Error: username is required');
-        return;
+        return; 
     }
     const username = req.query.username;
     const getWornClothes = require('./objects/Clothing').getWornClothes;
@@ -67,6 +67,16 @@ app.get('/reevaluate_next_week_clothes', (req, res) => {
     const nextWeekClothes = reevaluateNextWeekClothes(username, threshold);
     res.status(200).send({ 'status': 'success', 'data': nextWeekClothes });
 });
+
+app.get('/clothing', (req, res) => {
+    if (req.query === undefined || req.query.id === undefined) {
+        res.status(400).send('Error: id is required');
+        return;
+    }
+    const id = req.query.id;
+    const clothing = require('./objects/Clothing').clothings.find(clothing => clothing.id == id);
+    res.status(200).send({ 'status': 'success', 'data': clothing });
+})
 
 app.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);
