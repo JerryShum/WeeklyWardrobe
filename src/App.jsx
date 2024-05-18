@@ -1,7 +1,7 @@
 function App() {
   return (
-    <div className="border-black w-[430px] h-[932px]">
-      <h1>Hallo! America YA</h1>
+    <div>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
 }
