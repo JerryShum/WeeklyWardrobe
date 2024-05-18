@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "Server.js",
   "scripts": {
-    "start": "node Server.js"
+    "start": "node Server.js",
+    "test": "jest --coverage --match='**/*.test.js'"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "expressjs": "^1.0.1"
+    "expressjs": "^1.0.1",
+    "jest": "^29.7.0"
   }
 }
