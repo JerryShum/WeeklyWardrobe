@@ -20,6 +20,9 @@ if (process.env.PORT) {
 
 console.log(`Server is starting on http://${host}:${port}`);
 
+const updateStyleObject = require('./objects/User').updateStyleObject;
+const newStyleObject = require('./objects/User').users.find(user => user.username === username).styleObject;
+
 app.get('/get_worn_clothes', (req, res) => {
     // check if username is provided
     if (req.query === undefined || req.query.username === undefined) {
@@ -86,6 +89,18 @@ app.get('/user', (req, res) => {
     const username = req.query.username;
     const user = require('./objects/User').users.find(user => user.username === username);
     res.status(200).send({ 'status': 'success', 'data': user });
+});
+
+app.get('/update_style_object', (req, res) => {
+    if (req.query === undefined || req.query.username === undefined || req.query.clothingId === undefined || req.query.rating === undefined) {
+        res.status(400).send('Error: username, clothingId, and rating are required');
+        return;
+    }
+    const username = req.query.username;
+    const clothingId = req.query.clothingId;
+    const rating = req.query.rating;
+    const oldStyleObject = updateStyleObject(username, clothingId, rating);
+    res.status(200).send({ 'status': 'success', 'data': { 'oldStyleObject': oldStyleObject, 'newStyleObject': newStyleObject } });
 });
 
 app.listen(port, host, () => {
