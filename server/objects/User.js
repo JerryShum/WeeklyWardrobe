@@ -32,7 +32,7 @@ const updateStyleObject = (username, clothingId, rating) => {
     user.styleObj.sportyLvl = (user.styleObj.sportyLvl + clothing.styleObj.sportyLvl * rating) / 2;
     user.styleObj.formalLvl = (user.styleObj.formalLvl + clothing.styleObj.formalLvl * rating) / 2;
     user.styleObj.partyLvl = (user.styleObj.partyLvl + clothing.styleObj.partyLvl * rating) / 2;
-    return styleObj;
+    return user.styleObj;
 }
 
 module.exports = { User, users, updateStyleObject };
