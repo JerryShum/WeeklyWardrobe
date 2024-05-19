@@ -112,7 +112,11 @@ app.get('/get_top_products', (req, res) => {
     const username = req.query.username;
     const threshold = req.query.threshold;
     const user = require('./objects/User').users.find(user => user.username === username);
-    const topProducts = require('./objects/Product').getTopProducts(user.styleObject, threshold);
+    if(user === undefined) {
+        res.status(400).send('Error: user not found');
+        return;
+    }
+    const topProducts = require('./objects/Product').getTopProducts(user.styleObj, threshold);
     res.status(200).send({ 'status': 'success', 'data': topProducts });
 });
 
