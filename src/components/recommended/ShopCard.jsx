@@ -6,7 +6,7 @@ function ShopCard(imageURL, itemName, brandName, price) {
       <img
         src="https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/464932/item/cagoods_03_464932.jpg?width=750"
         alt="Shop Image"
-        className=" object-fill"
+        className=" object-fill rounded-xl "
       />
       <div className="flex flex-col">
         <p className="text-xl font-bold text-black">Item Name</p>
