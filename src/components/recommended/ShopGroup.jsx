@@ -29,24 +29,40 @@ function SamplePrevArrow(props) {
     />
   );
 }
-function ShopGroup(props) {
+function ShopGroup({ brandName, products, percentMatch }) {
   var settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+  // log products.length
+  console.log('products.length: ' + products.length);
   return (
     <div className=" bg-blue-200 rounded-xl p-10">
-      <p className="mb-3 font-bold text-xl">Style Category: {props.Category}</p>
+      <p className="mb-3 font-bold text-xl">Brand: {brandName}</p>
       <Slider {...settings}>
-        <ShopCard />
-        <ShopCard />
-        <ShopCard />
-        <ShopCard />
+        {...products.map((product) => {
+          console.log('product id: ' + product.productId);
+          return (
+            <ShopCard
+              key={product.productId}
+              imageurl={product.imageurl}
+              name={product.name}
+              brandName={product.brandName}
+              price={product.price}
+              percentMatch={percentMatch}
+            />
+            // <div>
+            //   productId: {product.productId}
+            //   {/* imageurl: {product.imageurl} */}
+            //   {/* name: {product.name} */}
+            // </div>
+          );
+        })}
       </Slider>
     </div>
   );
