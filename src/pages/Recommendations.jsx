@@ -1,3 +1,5 @@
+import ShopGroup from "../components/recommended/ShopGroup";
+
 function Recommendations() {
   return (
     <div className="flex flex-col overflow-hidden h-full w-full">
@@ -7,7 +9,13 @@ function Recommendations() {
       >
         Recommendations
       </h1>
-      <div className="  mt-auto mb-auto h-auto overflow-scroll p-5"></div>
+
+      <div className="mt-auto mb-auto h-auto overflow-scroll p-5 flex flex-col gap-20">
+        <ShopGroup Category="meow" />
+        <ShopGroup Category="meow" />
+        <ShopGroup Category="meow" />
+        <ShopGroup Category="meow" />
+      </div>
     </div>
   );
 }
