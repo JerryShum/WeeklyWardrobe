@@ -20,8 +20,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push backend image
         id: docker_build
@@ -31,7 +31,7 @@ jobs:
           push: true
           tags: |
             jerryshum26/weeklywardrobe:latest
-            
+
       - name: Build and push frontend image
         id: docker_build_frontend
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0 # v5.3.0
