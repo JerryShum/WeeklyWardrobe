@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 
+
+/* Slider Component */
 function valuetext(value) {
   return `${value}°C`;
 }

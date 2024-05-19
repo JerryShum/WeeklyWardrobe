@@ -1,5 +1,8 @@
 import React from "react";
 
+/*
+ShopCard: this component contains the layout of the recommended section
+*/
 function ShopCard({imageurl, name, brandName, price, percentMatch}) {
   return (
     <div className="flex flex-col p-3 rounded-xl overflow-hidden">

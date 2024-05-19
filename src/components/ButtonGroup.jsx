@@ -1,5 +1,9 @@
 import React from "react";
 
+/*
+ButtonGroup: contains all the types of button users will interact with such as
+Home,History,Shop & Upload
+*/
 function ButtonGroup() {
   return (
     <div className="flex items-center justify-stretch border-t-2 border-black w-full overflow-hidden">

@@ -5,6 +5,11 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import BasicRating from "./RatingButton";
 
+
+/*
+This component contains the layout to the details of the worn
+item such as the colour, size, when it was worn
+*/
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
