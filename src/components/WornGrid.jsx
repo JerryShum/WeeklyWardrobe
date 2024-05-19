@@ -30,8 +30,8 @@ function WornGrid() {
     const fetchAll = async () => {
       let wornItems = await fetchWorn();
       let clothings = await fetchClothings(wornItems);
-      console.log("Worn Items: " + wornItems);
-      console.log("Clothings: " + clothings);
+      // console.log("Worn Items: " + wornItems);
+      // console.log("Clothings: " + clothings);
       setWornItems(wornItems);
       setClothings(clothings);
     };
@@ -50,9 +50,12 @@ function WornGrid() {
          *     "rating": 4
          * },
          */
+        // log the item
+        let wornItem = wornItems.find((worn) => worn.clothingId === item.id);
+        // console.log(wornItem);
         return (
           <WornItem
-            key={item.clothingId}
+            key={item.id}
             clothingId={item.clothingId}
             owner={item.owner}
             name={item.name}
@@ -60,7 +63,8 @@ function WornGrid() {
             size={item.size}
             material={item.material}
             imageurl={item.imageurl}
-            weekworn={item.weekWorn}
+            // weekworn={wornItem.weekWorn}
+            weekworn={wornItem ? wornItem.weekWorn : "Not Worn Yet"}
           />
         );
       })}
