@@ -104,6 +104,22 @@ app.get('/update_style_object', (req, res) => {
     res.status(200).send({ 'status': 'success', 'data': { message, 'update': {oldStyleObject, newStyleObject} } });
 });
 
+app.get('/get_top_products', (req, res) => {
+    if (req.query === undefined || req.query.username === undefined || req.query.threshold === undefined) {
+        res.status(400).send('Error: username and threshold are required');
+        return;
+    }
+    const username = req.query.username;
+    const threshold = req.query.threshold;
+    const user = require('./objects/User').users.find(user => user.username === username);
+    if(user === undefined) {
+        res.status(400).send('Error: user not found');
+        return;
+    }
+    const topProducts = require('./objects/Product').getTopProducts(user.styleObj, threshold);
+    res.status(200).send({ 'status': 'success', 'data': topProducts });
+});
+
 app.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);
 });
