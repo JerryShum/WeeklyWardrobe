@@ -16,7 +16,7 @@ function ButtonGroup() {
         <button>Expected Clothes</button>
       </a>
       <a
-        href=""
+        href="/recommendations"
         className=" p-5 flex flex-1 items-center justify-center border-r-2 border-black hover:bg-black duration-300 font-semibold hover:text-white h-full"
       >
         <button>Recommendations</button>
