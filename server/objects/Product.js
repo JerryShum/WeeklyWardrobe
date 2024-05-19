@@ -27,6 +27,13 @@ let products = [
     new Product(7, 25.99, "Blue Jacket", "Wal-Mart", new StyleLevels(1, 3, 2, 4, 0), 'https://images.pexels.com/photos/2767159/pexels-photo-2767159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
     new Product (8, 35.99, "Grey Wool Jacket", "Blue Notes", new StyleLevels(2, 2, 5, 2, 1), 'https://images.pexels.com/photos/447570/pexels-photo-447570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
     new Product (9, 78.99, "Premium Brown Dress Shoes", "Blue Notes", new StyleLevels(2, 2, 5, 2, 1), 'https://images.pexels.com/photos/175689/pexels-photo-175689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+    new Product(10, 19.99, 'Draw String Bag', 'Uniqlo', new StyleLevels(5, 1, 5, 1, 2), 'https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/466920/item/goods_09_466920.jpg?width=750'),
+    new Product(11, 21.99, 'Extra Stretch AIRism Sleeveless Dress', 'Uniqlo', new StyleLevels(5, 1, 5, 1, 2), 'https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/464785/item/goods_69_464785.jpg?width=750'),
+    new Product(12, 25.99, 'EPREMIUM LINEN LONG SLEEVE SHIRT', 'Uniqlo', new StyleLevels(5, 1, 5, 1, 2), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/464732/item/cagoods_00_464732.jpg?width=750'),
+    new Product(13, 19.99, 'DRY PIQUE SHORT SLEEVE POLO SHIRT', 'Uniqlo', new StyleLevels(5, 1, 5, 1, 2), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/455388/item/cagoods_00_455388.jpg?width=750'),
+    new Product(14, 12.45, 'DRY PIQUE SHORT SLEEVE POLO SHIRT', 'Uniqlo', new StyleLevels(5, 1, 5, 1, 2), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/469052/item/cagoods_69_469052.jpg?width=750'),
+    new Product(15, 12.99, 'Shorts', 'Uniqlo', new StyleLevels(5, 1, 5, 1, 2), 'https://api.fastretailing.com/ugc/v1/uq/kr/SR_IMAGES/ugc_stylehint_uq_kr_photo_240504_1330936_c-600-800'),
+    new Product(16, 14.99, 'EXTRA FINE COTTON BROADCLOTH SHIRT', 'Uniqlo', new StyleLevels(5, 1, 5, 1, 2), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/466939/item/cagoods_64_466939.jpg?width=750'),
 ]
 
 //gets the top products
