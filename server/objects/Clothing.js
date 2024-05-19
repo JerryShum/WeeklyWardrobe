@@ -55,6 +55,7 @@ clothings = [
     new ClothingPiece(9, "Charlie", "White Shirt", "White", "L", "Cotton", "https://handcmediastorage.blob.core.windows.net/productimages/FI/FIPMA002-N01-169812-1400px-1820px.jpg"),
     new ClothingPiece(10, "Jeremy", "Tech H&M Sweater", "Teal", "XL", "Cotton", "https://i.imgur.com/dbqhK29.jpeg", new StyleLevels(1, 3, 2, 4, 5)),
     new ClothingPiece(11, "Jeremy", "Nike Shoes", "Blue", "28", "Leather", "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png", new StyleLevels(1, 3, 2, 4, 5)),
+    new ClothingPiece(12, "Jeremy", "Blouse", "Black", "XL", "Cotton", "https://images.pexels.com/photos/20122941/pexels-photo-20122941/free-photo-of-portrait-of-smiling-woman.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", new StyleLevels(5, 3, 4, 4, 5)),
 ];
 
 wornClothings = [
@@ -95,6 +96,15 @@ nextWeekClothings = [
     new NextWeekClothing("Charlie", 7, 90),
     new NextWeekClothing("Charlie", 8, 80),
     new NextWeekClothing("Charlie", 9, 70),
+    new NextWeekClothing("Jeremy", 1, 90),
+    new NextWeekClothing("Jeremy", 2, 92),
+    new NextWeekClothing("Jeremy", 3, 96),
+    new NextWeekClothing("Jeremy", 4, 93),
+    new NextWeekClothing("Jeremy", 5, 98),
+    new NextWeekClothing("Jeremy", 6, 55),
+    new NextWeekClothing("Jeremy", 7, 55),
+    new NextWeekClothing("Jeremy", 8, 55),
+    new NextWeekClothing("Jeremy", 9, 55),
     new NextWeekClothing("Jeremy", 10, 90),
     new NextWeekClothing("Jeremy", 11, 80),
 ];
