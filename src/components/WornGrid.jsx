@@ -30,8 +30,8 @@ function WornGrid() {
     const fetchAll = async () => {
       let wornItems = await fetchWorn();
       let clothings = await fetchClothings(wornItems);
-      console.log('Worn Items: ' + wornItems);
-      console.log('Clothings: ' + clothings);
+      console.log("Worn Items: " + wornItems);
+      console.log("Clothings: " + clothings);
       setWornItems(wornItems);
       setClothings(clothings);
     };
@@ -60,6 +60,7 @@ function WornGrid() {
             size={item.size}
             material={item.material}
             imageurl={item.imageurl}
+            weekworn={item.weekWorn}
           />
         );
       })}

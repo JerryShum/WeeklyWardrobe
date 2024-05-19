@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const WornItem = ({
   key,
-  clothingId,
+  weekworn,
   owner,
   name,
   colour,
@@ -42,12 +42,12 @@ const WornItem = ({
             <span className="font-semibold ">Colour: {colour}</span>
           </Item>
         </Grid>
-          <Grid item xs={4}>
-            <Item>
-              <span className="font-semibold">Name: {name}</span>
-            </Item>
-          </Grid>
         <Grid item xs={4}>
+          <Item>
+            <span className="font-semibold">Name: {name}</span>
+          </Item>
+        </Grid>
+        <Grid item xs={8}>
           <Item>
             <span className="font-semibold">Owner: {owner}</span>
           </Item>
@@ -64,7 +64,7 @@ const WornItem = ({
         </Grid>
         <Grid item xs={8}>
           <Item>
-            <span className="font-semibold">When you wore it : {owner}</span>
+            <span className="font-semibold">When you wore it : {weekworn}</span>
           </Item>
         </Grid>
       </Grid>
