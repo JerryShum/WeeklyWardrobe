@@ -41,7 +41,7 @@ function ShopGroup(props) {
   };
   return (
     <div className=" bg-blue-200 rounded-xl p-10">
-      <p className="mb-3 font-bold text-xl">Category: {props.Category}</p>
+      <p className="mb-3 font-bold text-xl">Style Category: {props.Category}</p>
       <Slider {...settings}>
         <ShopCard />
         <ShopCard />

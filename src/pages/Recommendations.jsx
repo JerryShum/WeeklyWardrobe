@@ -10,7 +10,7 @@ function Recommendations() {
         Recommendations
       </h1>
 
-      <div className="mt-auto mb-auto h-auto overflow-scroll p-5 flex flex-col gap-20">
+      <div className="mt-auto mb-auto h-auto overflow-scroll p-5 flex flex-col gap-12">
         <ShopGroup Category="meow" />
         <ShopGroup Category="meow" />
         <ShopGroup Category="meow" />
