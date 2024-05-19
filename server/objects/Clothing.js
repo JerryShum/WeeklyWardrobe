@@ -8,7 +8,6 @@ class ClothingPiece {
         this.owner = owner;
         this.name = name;
         this.colour = colour;
-        this.style = style;
         this.size = size;
         this.material = material;
         this.imageurl = imageurl;
@@ -111,7 +110,7 @@ const getCurrentWeekClothes = (username) => {
 }
 
 const reevaluateNextWeekClothes = (username, threshold) => {
-    let userStyleObj = users.find(user => user.username === username).style;
+    let userStyleObj = users.find(user => user.username === username).styleObj;
     let clothingsToCheck = clothings.filter(clothing => clothing.owner !== username && !wornClothings.some(wornClothing => wornClothing.clothingId === clothing.id));
     // remove all of username in nextWeekClothings
     nextWeekClothings = nextWeekClothings.filter(nextWeekClothing => nextWeekClothing.username !== username);
