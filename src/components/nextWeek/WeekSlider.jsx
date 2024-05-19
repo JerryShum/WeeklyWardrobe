@@ -17,8 +17,9 @@ export default function WeekSlider() {
         shiftStep={5}
         step={5}
         marks={true}
-        min={1}
+        min={0}
         max={100}
+        color="black"
       />
     </Box>
   );

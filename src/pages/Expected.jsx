@@ -1,5 +1,5 @@
 import ThisGroup from "../components/thisWeek/ThisGroup";
-import NextWeekComp from "../components/nextWeek/NextWeekComp";
+import NextWeekGIGA from "../components/nextWeek/NextWeekGIGA";
 
 function Expected() {
   return (
@@ -17,7 +17,7 @@ function Expected() {
         </div>
         {/* Next week */}
         <div>
-          <NextWeekComp />
+          <NextWeekGIGA />
         </div>
       </div>
     </div>
