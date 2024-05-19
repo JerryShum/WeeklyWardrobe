@@ -14,11 +14,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const WornItem = ({
-  clothID,
+  key,
+  clothingId,
   owner,
   name,
   colour,
-  style,
   size,
   material,
   imageurl,
@@ -27,7 +27,7 @@ const WornItem = ({
     <div className="flex flex-col gap-5 justify-center items-center object-contain">
       <img
         className=" outline rounded border-black object-contain"
-        src="https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/465185/item/cagoods_07_465185.jpg?width=750"
+        src={imageurl}
         alt="image of clothing"
       />
       <Grid
@@ -39,17 +39,27 @@ const WornItem = ({
       >
         <Grid item xs={8}>
           <Item>
-            <span className="font-semibold ">ID: {clothID}</span>
+            <span className="font-semibold ">Colour: {colour}</span>
           </Item>
         </Grid>
-        <Grid item xs={4}>
-          <Item>
-            <span className="font-semibold">Rating: {owner}</span>
-          </Item>
-        </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <span className="font-semibold">Name: {name}</span>
+            </Item>
+          </Grid>
         <Grid item xs={4}>
           <Item>
             <span className="font-semibold">Owner: {owner}</span>
+          </Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>
+            <span className="font-semibold">Size: {size}</span>
+          </Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>
+            <span className="font-semibold">Material: {material}</span>
           </Item>
         </Grid>
         <Grid item xs={8}>
