@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const WornItem = ({
   key,
-  clothingId,
+  weekworn,
   owner,
   name,
   colour,
@@ -24,9 +24,9 @@ const WornItem = ({
   imageurl,
 }) => {
   return (
-    <div className="flex flex-col gap-5 justify-center items-center object-contain">
+    <div className="flex flex-col gap-5 justify-center items-center object-contain h-full">
       <img
-        className=" outline rounded border-black object-contain"
+        className="rounded object-cover h-1/2 w-3/4"
         src={imageurl}
         alt="image of clothing"
       />
@@ -37,34 +37,46 @@ const WornItem = ({
         container
         spacing={2}
       >
-        <Grid item xs={8}>
-          <Item>
-            <span className="font-semibold ">Colour: {colour}</span>
-          </Item>
-        </Grid>
-          <Grid item xs={4}>
-            <Item>
-              <span className="font-semibold">Name: {name}</span>
-            </Item>
-          </Grid>
         <Grid item xs={4}>
-          <Item>
-            <span className="font-semibold">Owner: {owner}</span>
-          </Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>
-            <span className="font-semibold">Size: {size}</span>
-          </Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>
-            <span className="font-semibold">Material: {material}</span>
+          <Item className="h-full ">
+            <span className="font-semibold h-full flex items-center text-center justify-center">
+              Colour: {colour}
+            </span>
           </Item>
         </Grid>
         <Grid item xs={8}>
-          <Item>
-            <span className="font-semibold">When you wore it : {owner}</span>
+          <Item className="h-full">
+            <span className="font-semibold h-full flex items-center text-center justify-center">
+              Item: {name}
+            </span>
+          </Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item className="h-full">
+            <span className="font-semibold h-full flex items-center text-center justify-center">
+              Owner: {owner}
+            </span>
+          </Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item className="h-full">
+            <span className="font-semibold h-full flex items-center text-center justify-center">
+              Size: {size}
+            </span>
+          </Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item className="h-full">
+            <span className="font-semibold h-full flex items-center text-center justify-center">
+              Material: {material}
+            </span>
+          </Item>
+        </Grid>
+        <Grid item xs={6}>
+          <Item className="h-full">
+            <span className="font-semibold font-semibold h-full flex items-center text-center justify-center">
+              When you wore it : {weekworn}
+            </span>
           </Item>
         </Grid>
       </Grid>
