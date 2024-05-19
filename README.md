@@ -1,10 +1,21 @@
 # WeeklyWardrobe
 
+## Hackers
+
+- [JeremyTubongbanua](https://github.com/JeremyTubongbanua)
+= [Neh2332](https://github.com/Neh2332)
+- [JerryShum](https://github.com/JerryShum)
+- [xJoney](https://github.com/xJoney)
+
+## Live Demo
+
+Demo live at [weeklywardrobe.club](http://www.weeklywardrobe.club)
+
+## Description
+
 WeeklyWardrobe is an application product service that helps people explore and mature their fashion needs. The application provides a platform for people to give up their unused clothing and make money from lending it to others to try on. Consumers of the application will pay a subscription fee for access to clothing to try on weekly which arrives right at their doorstep. The application will also provide a recommendation system for users to purchase clothing that matches their style from brand deals.
 
 Overall, the app allows brands, people with unused clothing, and people looking for new clothing to come together and save money. Brands can advertise their clothing to users, users can try on clothing and solidify what clothing they really like. Companies no longer have to suffer from the high costs of returns and users can save money by not having to buy clothing that they don't like.
-
-
 
 ## API Specification
 
