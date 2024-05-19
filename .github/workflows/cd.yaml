@@ -30,4 +30,4 @@ jobs:
         with:
           file: Dockerfile
           push: true
-          tags: jerryshum26/weeklywarddrobesite:latest
+          tags: jerryshum26/weeklywardrobesite:latest
