@@ -74,7 +74,7 @@ const WornItem = ({
         </Grid>
         <Grid item xs={6}>
           <Item className="h-full">
-            <span className="font-semibold font-semibold h-full flex items-center text-center justify-center">
+            <span className=" font-semibold h-full flex items-center text-center justify-center">
               When you wore it : {weekworn}
             </span>
           </Item>
