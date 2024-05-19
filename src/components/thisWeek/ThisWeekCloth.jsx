@@ -1,11 +1,11 @@
 import React from "react";
 
-const ThisWeekCloth = ({ status, imageURL }) => {
+const ThisWeekCloth = ({ status, imageurl }) => {
   return (
     <div>
       <div className="flex flex-col outline border-black rounded-xl">
         <img
-          src="https://media.tenor.com/eW7OQiA0XGsAAAAe/peepo-sip.png"
+          src={imageurl}
           alt="pepesip"
           className="border-black border-b-2 "
         />
