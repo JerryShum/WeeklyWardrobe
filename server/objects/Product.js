@@ -33,7 +33,7 @@ let products = [
     new Product(15, 29.99, "Tropical Print Shirt", "Blue Notes", new StyleLevels(3, 2, 5, 2, 1), 'https://images-ext-1.discordapp.net/external/S6D-ABfjbOtlP742zNefHgpoKz3L73AMxc3OUuSaebA/%3Fv%3D1711663205/https/blnts.com/cdn/shop/files/060239662405-66-0_1080x.jpg?format=webp&width=926&height=1390'),
     new Product(16, 29.99, "Aero Shirt", "Blue Notes", new StyleLevels(3, 2, 5, 2, 1), 'https://blnts.com/cdn/shop/files/630239662404-41-0_1024x1024@2x.jpg?v=1715779948'),
     new Product(17, 29.99, "Linen Collar Shirt", "Uniqlo", new StyleLevels(3, 2, 5, 2, 1), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/467121/item/cagoods_31_467121.jpg?width=750'),
-    new Product(17, 29.99, "Linen Blend Pants", "Uniqlo", new StyleLevels(3, 2, 5, 2, 1), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/463857/item/cagoods_30_463857.jpg?width=750'),
+    new Product(18, 29.99, "Linen Blend Pants", "Uniqlo", new StyleLevels(3, 2, 5, 2, 1), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/463857/item/cagoods_30_463857.jpg?width=750'),
 ]
 
 //gets the top products
