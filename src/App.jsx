@@ -8,7 +8,7 @@ import Recommended from "./pages/Recommendations";
 function App() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="overflow-hidden flex flex-col justify-center items-center rounded-xl border-2 border-black w-2/5 h-[90%] mx-auto">
+      <div className="overflow-hidden flex flex-col justify-center items-center rounded-xl border-2 border-black w-2/5 h-[90%] mx-auto bg-white">
         <TopBar></TopBar>
         <BrowserRouter>
           <Routes>
