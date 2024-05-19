@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import WornItem from "./WornItem";
 
+/*
+This component sets up the worn clothes page in a grid like display
+*/
 function WornGrid() {
   const [wornItems, setWornItems] = useState([]);
   const [clothings, setClothings] = useState([]);

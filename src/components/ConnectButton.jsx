@@ -2,6 +2,9 @@ import { ThirdwebProvider, ConnectButton } from "thirdweb/react";
 import { createWallet } from "thirdweb/wallets";
 import { createThirdwebClient } from "thirdweb";
 
+/*
+This component connects wallet using blockchain
+*/
 const client = createThirdwebClient({
   clientId: "0567ad836257d1c4f7277f78dca31c13",
 });

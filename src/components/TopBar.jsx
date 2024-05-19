@@ -1,6 +1,10 @@
 import React from "react";
 import { ConnectionButton } from "./ConnectButton.jsx";
 
+/*
+ TopBar component displays information such as who's logged in 
+ and contains a logout button
+*/
 function TopBar() {
   return (
     <div className="flex p-8 justify-between items-center w-full">

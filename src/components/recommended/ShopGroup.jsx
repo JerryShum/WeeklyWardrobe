@@ -4,6 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+/*
+SampleNextArrow: This component contains the function that
+allows users to see the next set of clothes when the next or prev
+arrow is pressed
+*/
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (

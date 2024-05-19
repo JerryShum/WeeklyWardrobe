@@ -1,5 +1,9 @@
 import React from "react";
 
+/*
+ButtonGroup: contains all the types of button users will interact with such as
+Home,History,Shop & Upload
+*/
 function ButtonGroup() {
   return (
     <div className="flex items-center justify-stretch border-t-2 border-black w-full overflow-hidden">
@@ -22,7 +26,7 @@ function ButtonGroup() {
         <button>Shop</button>
       </a>
       <a
-        href=""
+        href="/upload"
         className=" p-5 flex flex-1 items-center justify-center border-black hover:bg-black duration-300 font-semibold hover:text-white h-full"
       >
         <button>Upload</button>

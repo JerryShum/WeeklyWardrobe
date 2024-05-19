@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import NextWeekCloth from "./NextWeekCloth";
 
+
+/*
+NextWeekGroup: Component that  map the clothes for next week
+*/
 function NextWeekGroup({ nextWeekClothes }) {
   const [clothings, setClothings] = useState([]);
 

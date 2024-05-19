@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import WeekSlider from "./WeekSlider";
 import NextWeekGroup from "./NextWeekGroup";
 
+/*
+NextWeekComp: this component returns the layout for the next week page
+*/
 function NextWeekComp() {
   const [nextWeekClothes, setNextWeekClothes] = useState([]);
 

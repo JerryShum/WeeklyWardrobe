@@ -1,4 +1,5 @@
-//tests for /get_worn_clothes
+
+// tests for /get_worn_clothes
 test('get_worn_clothes_username',()=>{
     const url = 'http://jeremymark.ca:3000/get_worn_clothes?username=Jeremy';
     fetch(url)
@@ -11,6 +12,35 @@ test('get_worn_clothes_username',()=>{
     })
 });
 
+test('get_worn_clothes_username',()=>{
+    const axios = require('axios');
+    async function getWornClothes() {
+        try {
+          const response = await axios.get('/get_worn_clothes?username=Jeremy')
+          console.log(response);
+
+        //   console.log(json.data[0].username);  
+        //   expect(json.data[0].username).toBe("Jeremy");
+            
+            // expect(json.data[0].clothingId).toBe(2);
+            // expect(json.data[0].weekWorn).toBe("May Week 1");
+            // expect(json.data[0].rating).toBe(4);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      
+});
+test('get_worn_clothes_username',()=>{
+    const axios = require('axios');
+    axios({
+        method: 'get',
+        url: 'http://jeremymark.ca:3000/get_worn_clothes?username=Jeremy',
+      })
+        .then(function (response) {
+            console.log(response.data[0].username);
+        });
+});
 test('get_worn_clothes_rating',()=>{
     const url = 'http://jeremymark.ca:3000/get_worn_clothes?username=Alice';
     fetch(url)

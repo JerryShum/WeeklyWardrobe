@@ -3,6 +3,10 @@ import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
 
+/*
+  Rating Component allows users to rate the products
+*/
+
 export default function BasicRating() {
   const [value, setValue] = React.useState(2);
 

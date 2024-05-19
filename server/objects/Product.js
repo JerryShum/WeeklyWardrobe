@@ -13,6 +13,7 @@ class Product {
     }
 }
 
+//assigning values to Product[]
 let products = [
     new Product(0, 25.99, "Yellow Dress", "Muji", new StyleLevels(1, 3, 2, 4, 0), 'https://muji.ca/cdn/shop/files/4550583818920_org_700x.jpg?v=1711558561'),
     new Product(1, 35.99, "Linen Blouse", "Muji", new StyleLevels(2, 2, 3, 2, 1), 'https://muji.ca/cdn/shop/files/4550583835088_org_700x.jpg?v=1713986178'),
@@ -35,6 +36,7 @@ let products = [
     new Product(17, 29.99, "Linen Blend Pants", "Uniqlo", new StyleLevels(3, 2, 5, 2, 1), 'https://image.uniqlo.com/UQ/ST3/ca/imagesgoods/463857/item/cagoods_30_463857.jpg?width=750'),
 ]
 
+//gets the top products
 const getTopProducts = (styleObj, threshold) => {
     let topProducts = [];
     for (let product of products) {

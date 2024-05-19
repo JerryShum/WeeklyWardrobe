@@ -1,5 +1,8 @@
 import React from "react";
 
+/*
+NextWeekCloth: this component contains the layout for details on next week clothes
+*/
 const NextWeekCloth = ({
   name,
   imageurl,
