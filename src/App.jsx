@@ -3,6 +3,7 @@ import ButtonGroup from "./components/ButtonGroup";
 import TopBar from "./components/TopBar";
 import Worn from "./pages/Worn";
 import Expected from "./pages/Expected";
+import Recommended from "./pages/Recommendations";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Worn />} />
             <Route path="/expected" element={<Expected />} />
+            <Route path="/recommendations" element={<Recommended />} />
           </Routes>
         </BrowserRouter>
         <ButtonGroup></ButtonGroup>
