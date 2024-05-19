@@ -8,7 +8,7 @@ class User {
     }
 }
 
-
+//contains user's info
 users = [
     new User("Alice", new StyleLevels(1, 3, 2, 4, 5), true),
     new User("Bob", new StyleLevels(2, 4, 3, 5, 1), false),
@@ -27,6 +27,7 @@ const updateStyleObject = (username, clothingId, rating) => {
     // console log styleObj and clothing.styleObj
     console.log(user.styleObj);
     console.log(clothing.styleObj);
+    //calculates the level for each style category and return the values 
     user.styleObj.vintageLvl = (user.styleObj.vintageLvl + clothing.styleObj.vintageLvl * rating) / 2;
     user.styleObj.smartCasualLvl = (user.styleObj.smartCasualLvl + clothing.styleObj.smartCasualLvl * rating) / 2;
     user.styleObj.sportyLvl = (user.styleObj.sportyLvl + clothing.styleObj.sportyLvl * rating) / 2;
