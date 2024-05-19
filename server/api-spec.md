@@ -249,3 +249,92 @@ Response Example
     }
 }
 ```
+
+## /get_top_products
+
+GET http://jeremymark.ca:3000/get_top_products
+
+Query Body
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| username | string | The username of the user. |
+| threshold | int | The threshold for the match percentage. A higher match percentage will mean the clothes will be closest to your style. |
+
+Response Example
+
+```json
+{
+    "status": "success",
+    "data": [
+        {
+            "product": {
+                "productId": 2,
+                "price": 45.99,
+                "name": "Green T-Shirt",
+                "brandName": "Muji",
+                "styleObj": {
+                    "vintageLvl": 3,
+                    "smartCasualLvl": 1,
+                    "sportyLvl": 4,
+                    "formalLvl": 1,
+                    "partyLvl": 2
+                },
+                "imageurl": "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            },
+            "matchPercent": 80
+        },
+        {
+            "product": {
+                "productId": 3,
+                "price": 45.99,
+                "name": "Nike Air XL",
+                "brandName": "Nike",
+                "styleObj": {
+                    "vintageLvl": 3,
+                    "smartCasualLvl": 1,
+                    "sportyLvl": 4,
+                    "formalLvl": 1,
+                    "partyLvl": 2
+                },
+                "imageurl": "https://images.pexels.com/photos/20066688/pexels-photo-20066688/free-photo-of-nike-air-flight-89-in-a-box.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            },
+            "matchPercent": 80
+        },
+        {
+            "product": {
+                "productId": 4,
+                "price": 11.99,
+                "name": "Naruto White-T",
+                "brandName": "Uniqlo",
+                "styleObj": {
+                    "vintageLvl": 5,
+                    "smartCasualLvl": 1,
+                    "sportyLvl": 5,
+                    "formalLvl": 1,
+                    "partyLvl": 2
+                },
+                "imageurl": "https://images.pexels.com/photos/4066288/pexels-photo-4066288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            },
+            "matchPercent": 85
+        },
+        {
+            "product": {
+                "productId": 6,
+                "price": 12.99,
+                "name": "Nirvana",
+                "brandName": "Uniqlo",
+                "styleObj": {
+                    "vintageLvl": 5,
+                    "smartCasualLvl": 1,
+                    "sportyLvl": 5,
+                    "formalLvl": 1,
+                    "partyLvl": 2
+                },
+                "imageurl": "https://images.pexels.com/photos/1933589/pexels-photo-1933589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            },
+            "matchPercent": 85
+        }
+    ]
+}
+```
