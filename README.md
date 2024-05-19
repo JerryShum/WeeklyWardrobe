@@ -16,10 +16,9 @@ Demo live at [weeklywardrobe.club](http://www.weeklywardrobe.club)
 WeeklyWardrobe is an application product service that helps people explore and mature their fashion needs. The application provides a platform for people to give up their unused clothing and make money from lending it to others to try on. Consumers of the application will pay a subscription fee for access to clothing to try on weekly which arrives right at their doorstep. The application will also provide a recommendation system for users to purchase clothing that matches their style from brand deals.
 
 Overall, the app allows brands, people with unused clothing, and people looking for new clothing to come together and save money. Brands can advertise their clothing to users, users can try on clothing and solidify what clothing they really like. Companies no longer have to suffer from the high costs of returns and users can save money by not having to buy clothing that they don't like.
+# API Specification
 
-## API Specification
-
-### /get_worn_clothes
+## /get_worn_clothes
 
 GET http://jeremymark.ca:3000/get_worn_clothes
 
@@ -69,7 +68,7 @@ Response Example
 }
 ```
 
-### /get_current_week_clothes
+## /get_current_week_clothes
 
 GET http://jeremymark.ca:3000/get_current_week_clothes
 
@@ -120,7 +119,7 @@ Response Example
 ```
 
 
-### /get_next_week_clothes
+## /get_next_week_clothes
 
 GET http://jeremymark.ca:3000/get_next_week_clothes
 
@@ -150,7 +149,7 @@ Request Example
 }
 ```
 
-### /reevaluate_next_week_clothes
+## /reevaluate_next_week_clothes
 
 GET http://jeremymark.ca:3000/reevaluate_next_week_clothes
 
@@ -211,7 +210,7 @@ Response Example
 }
 ```
 
-### /user
+## /user
 
 GET http://jeremymark.ca:3000/user
 
@@ -240,7 +239,7 @@ Response Example
 }
 ```
 
-### /update_style_object
+## /update_style_object
 
 GET http://jeremymark.ca:3000/update_style_object
 
@@ -269,7 +268,7 @@ Response Example
 }
 ```
 
-### /get_top_products
+## /get_top_products
 
 GET http://jeremymark.ca:3000/get_top_products
 
