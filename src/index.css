@@ -7,7 +7,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  background-color: bisque;
+  background-image: url('https://media.discordapp.net/attachments/1202763244922601493/1241630431166730270/image.png?ex=664ae5f3&is=66499473&hm=de21c76826954e5a2f5b272ec947d21633b8cee2a8dd42178dc98097feaf12aa&=&format=webp&quality=lossless&width=1390&height=1390');
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

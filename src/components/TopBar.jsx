@@ -1,4 +1,5 @@
 import React from "react";
+import { ConnectionButton } from "./ConnectButton.jsx";
 
 function TopBar() {
   return (
@@ -7,9 +8,13 @@ function TopBar() {
         <p className="text-lg font-semibold">Logged in as: </p>
         <p className="text-lg font-semibold underline">Jeremy</p>
       </div>
-      <button className="border border-black rounded outline p-3 hover:bg-black hover:text-white duration-300 font-semibold">
-        Logout
-      </button>
+      <div className="flex gap-5">
+        <ConnectionButton />
+
+        <button className="border border-black rounded outline p-3 hover:bg-black hover:text-white duration-300 font-semibold">
+          Logout
+        </button>
+      </div>
     </div>
   );
 }
