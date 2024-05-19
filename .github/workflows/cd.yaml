@@ -1,42 +1,33 @@
 name: CD
-
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  docker-build:
+  push-images:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Set up QEMU
+      - name: QEMU Step1
         uses: docker/setup-qemu-action@v1
-
-      - name: Set up Docker Buildx
+      - name: Docker Buildx Step2
         uses: docker/setup-buildx-action@v1
-
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Build and push backend image
-        id: docker_build
+      - name: Build and push server image
+        id: docker_build_server
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0 # v5.3.0
         with:
           file: server/Dockerfile
           push: true
-          tags: |
-            jerryshum26/weeklywardrobe:latest
-
+          tags: jerryshum26/weeklywardrobe:latest
       - name: Build and push frontend image
         id: docker_build_frontend
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0 # v5.3.0
         with:
           file: Dockerfile
           push: true
-          tags: |
-            jerryshum26/weeklywarddrobesite:latest
+          tags: jerryshum26/weeklywarddrobesite:latest

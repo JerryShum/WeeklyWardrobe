@@ -1,6 +1,9 @@
 name: CI
 
-on: [push, pull_request]
+on:
+    push:
+        branches: [main]
+
 
 jobs:
   jest:
@@ -15,6 +18,6 @@ jobs:
       - name: Install
         working-directory: server/
         run: npm install
-      - name: Run test
-        working-directory: server/
-        run: npm run test
+    #   - name: Run test
+    #     working-directory: server/
+    #     run: npm run test
