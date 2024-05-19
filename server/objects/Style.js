@@ -12,6 +12,7 @@ class StyleLevels {
 
 const calculateMatchPercent = (usersStyleObj, clothingStyleObj) => {
     let matchPercent = 0;
+    if (usersStyleObj === undefined || clothingStyleObj === undefined) return 0;
     matchPercent += Math.abs(usersStyleObj.vintageLvl - clothingStyleObj.vintageLvl);
     matchPercent += Math.abs(usersStyleObj.smartCasualLvl - clothingStyleObj.smartCasualLvl);
     matchPercent += Math.abs(usersStyleObj.sportyLvl - clothingStyleObj.sportyLvl);
