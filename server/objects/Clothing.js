@@ -56,6 +56,14 @@ clothings = [
     new ClothingPiece(10, "Jeremy", "Tech H&M Sweater", "Teal", "XL", "Cotton", "https://i.imgur.com/dbqhK29.jpeg", new StyleLevels(1, 3, 2, 4, 5)),
     new ClothingPiece(11, "Jeremy", "Nike Shoes", "Blue", "28", "Leather", "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png", new StyleLevels(1, 3, 2, 4, 5)),
     new ClothingPiece(12, "Jeremy", "Blouse", "Black", "XL", "Cotton", "https://images.pexels.com/photos/20122941/pexels-photo-20122941/free-photo-of-portrait-of-smiling-woman.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", new StyleLevels(5, 3, 4, 4, 5)),
+    new ClothingPiece(13, "Alice", "Red Dress", "Red", "M", "Cotton", "https://assets.vogue.com/photos/657364efd68e5cac916773ac/3:4/w_748%2Cc_limit/slide_7.jpg", new StyleLevels(1, 3, 2, 4, 5)),
+    new ClothingPiece(14, "Alice", "Black Trousers", "Black", "L", "Polyester", "https://storage.googleapis.com/stateless-www-stylebee-ca/2023/03/8036b685-c22448d0-ba1b-4dfa-9b91-143594987a27.jpg", new StyleLevels(5, 5, 1, 1, 1)),
+    new ClothingPiece(15, "Alice", "Blue Jeans", "Blue", "S", "Denim", "https://s7.landsend.com/is/image/LandsEnd/532582_LEPP_LF_5T1?$xl$&wid=1003&hei=1003", new StyleLevels(2, 2, 1, 3, 2)),
+    new ClothingPiece(16, "Bob", "White Shirt", "White", "M", "Cotton", "https://i.ebayimg.com/images/g/ejwAAOSw~q9izhSB/s-l1200.webp", new StyleLevels(1, 2, 1, 3, 2)),
+    new ClothingPiece(17, "Bob", "Grey Suit", "Grey", "L", "Wool", "https://classy.ca/wp-content/uploads/2022/02/GREY_suit_277-1-6.jpg", new StyleLevels(2, 2, 1, 3, 2)),
+    new ClothingPiece(18, "Bob", "Blue Hoodie", "Blue", "M", "Cotton", "https://www.mrbigandtall.ca/cdn/shop/products/BW-5558-67-5348_blue_1800x.jpg?v=1679503167]", new StyleLevels(1, 2, 1, 3, 2)),
+    new ClothingPiece(19, "Charlie", "Black Dress", "Black", "S", "Polyester", "https://i5.walmartimages.com/asr/a932db43-827d-4283-802f-71e99b414470.57b3285b8d9807c4f544440139581863.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF", new StyleLevels(2, 3, 1, 3, 2)),
+    new ClothingPiece(20, "Charlie", "Red Trousers", "Red", "M", "Cotton", "https://media1.popsugar-assets.com/files/thumbor/Zm7hS9axg1h5lP_T4f8TfAdnfzU/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/11/29/442/n/1922564/23fa80b19d18bf33_GettyImages-1066072128/i/Victoria-Beckham-Red-Trousers-November-2018.jpg", new StyleLevels(5, 2, 1, 3, 2)),
 ];
 
 wornClothings = [
