@@ -22,7 +22,7 @@ function ButtonGroup() {
         <button>Shop</button>
       </a>
       <a
-        href=""
+        href="/upload"
         className=" p-5 flex flex-1 items-center justify-center border-black hover:bg-black duration-300 font-semibold hover:text-white h-full"
       >
         <button>Upload</button>

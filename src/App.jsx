@@ -4,6 +4,7 @@ import TopBar from "./components/TopBar";
 import Worn from "./pages/Worn";
 import Expected from "./pages/Expected";
 import Recommended from "./pages/Recommendations";
+import Upload from "./pages/upload";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Worn />} />
             <Route path="/expected" element={<Expected />} />
             <Route path="/recommendations" element={<Recommended />} />
+            <Route path="/upload" element={<Upload />} />
           </Routes>
         </BrowserRouter>
         <ButtonGroup></ButtonGroup>
