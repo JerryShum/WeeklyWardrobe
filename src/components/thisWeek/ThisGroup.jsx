@@ -16,7 +16,7 @@ function ThisGroup() {
 
     const fetchClothings = async (currentWeeksClothes) => {
       let clothings = [];
-      for(let i = 0; i < currentWeeksClothes.length; i++) {
+      for (let i = 0; i < currentWeeksClothes.length; i++) {
         let url = `http://jeremymark.ca:3000/clothing?id=${currentWeeksClothes[i].clothingId}`;
         const response = await fetch(url);
         const data = await response.json();
@@ -24,7 +24,7 @@ function ThisGroup() {
         clothings.push(x);
       }
       return clothings;
-    }
+    };
 
     const fetchAll = async () => {
       let currentWeeksClothes = await fetchCurrentWeeksClothes();
@@ -42,17 +42,32 @@ function ThisGroup() {
         This Week's Clothes
       </h1>
 
-      <div className="flex gap-5">
+      <div className="flex gap-5 items-center justify-center">
         {currentWeeksClothes.map((item) => {
           return (
             <ThisWeekCloth
               key={item.clothingId}
               status={item.status}
-              name={clothings.find(clothing => clothing.id === item.clothingId).name}
-              imageurl={clothings.find(clothing => clothing.id === item.clothingId).imageurl}
-              colour={clothings.find(clothing => clothing.id === item.clothingId).colour}
-              size={clothings.find(clothing => clothing.id === item.clothingId).size}
-              material={clothings.find(clothing => clothing.id === item.clothingId).material}
+              name={
+                clothings.find((clothing) => clothing.id === item.clothingId)
+                  .name
+              }
+              imageurl={
+                clothings.find((clothing) => clothing.id === item.clothingId)
+                  .imageurl
+              }
+              colour={
+                clothings.find((clothing) => clothing.id === item.clothingId)
+                  .colour
+              }
+              size={
+                clothings.find((clothing) => clothing.id === item.clothingId)
+                  .size
+              }
+              material={
+                clothings.find((clothing) => clothing.id === item.clothingId)
+                  .material
+              }
             />
           );
         })}
